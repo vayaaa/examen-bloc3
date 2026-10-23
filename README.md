@@ -23,4 +23,6 @@ L'objectif de ce projet est de développer une carte de recherche de restaurants
 
 
 # Accès 
-La carte est accessible en ligne via l'URL suivante: 
+La carte est accessible en ligne via l'URL suivante:  
+https://examen-bloc3-g46uhqerh-vayaaas-projects.vercel.app/
+
