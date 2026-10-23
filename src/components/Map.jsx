@@ -19,19 +19,20 @@ const ChangeMapCity = ({ selectedCity }) => {
         const lon = Number(selectedCity.lon);
 
         //Déplace la carte vers le point
-        map.flyTo([lat, lon], 15)
+        map.flyTo([lat, lon], 13)
 
     }, [selectedCity, map]);
 
     return null;
 }
 
+
 //Affiche la carte et les éléments d'infos 
-const Map = ({ selectedCity, restaurants = [], onSelectResto }) => {
+const Map = ({ selectedCity, restaurants = [], onSelectResto}) => {
     const position = [48.85341, 2.3488]; //Position de base: Paris
 
     return (
-        <MapContainer center={position} zoom={15} scrollWheelZoom={false}>
+        <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -41,11 +42,11 @@ const Map = ({ selectedCity, restaurants = [], onSelectResto }) => {
 
 
             {/* Popup des restaurants */}
-            {restaurants.map((restaurants) => (
-                <Marker key={restaurants.name_Id} position={[Number(restaurants.lat), Number(restaurants.lon)]}>
+            {restaurants.map((restaurant) => (
+                <Marker key={restaurant.place_id} position={[Number(restaurant.lat), Number(restaurant.lon)]}>
                     <Popup className="popup">
-                        <p>{restaurants.display_name}</p>
-                        <button className="chose-button" type="button" >Choisir</button>
+                        <p>{restaurant.display_name}</p>
+                        <button className="chose-button" type="button" onClick={() => onSelectResto(restaurant)}>Choisir</button>
                     </Popup>
                 </Marker>
             ))}

@@ -7,7 +7,7 @@ export async function searchCities(name) {
     const params = new URLSearchParams({
         q: name,
         format: "json",
-        limit: 5,
+        limit: 1,
         countrycodes: "fr",
         featureType: "city",
     });

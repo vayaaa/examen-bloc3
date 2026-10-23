@@ -1,16 +1,26 @@
-# React + Vite
+# Carte de restaurants
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+L'objectif de ce projet est de développer une carte de recherche de restaurants Macdo en utilisant le Framework Front React dans un environnement Vite.js. 
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies utilisées
+- React (interface utilisateur et gestion des composants)
+- Vite (environnement de développement)
+- React Router (navigation entre les pages)
+- HTML/CSS/Javascript (structure et mise en forme)
+- Librairie React Leaflet (carte)
+- API Nominatim (données ville, restaurants)
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Fonctionnalités principales
 
-## Expanding the Oxlint configuration
+ - [x] Rechercher une ville de France
+ - [x] Afficher les restaurants dans chaque villes recherchées
+ - [x] Afficher les informations du restaurants 
+ - [x] Afficher les informations du restaurants 
+ - [x] Lien vers la page du restaurant {ajout}
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+
+
+# Accès 
+La carte est accessible en ligne via l'URL suivante: 

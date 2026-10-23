@@ -14,6 +14,10 @@ body {
   overflow: hidden;
 }
 
+
+/* ____________________________________________________________  */
+/* Page HOME */
+/* ____________________________________________________________  */
 .home {
   position: relative;
   display: flex;
@@ -22,7 +26,7 @@ body {
 }
 
 
-/* Map */
+/* Map____________________________________________________________  */
 .map {
   position: relative;
 
@@ -35,9 +39,9 @@ body {
   margin: 0;
 }
 
-/* Search Bar */
+/* Search Bar____________________________________________________________  */
 .search-container {
-  top: 4rem;
+  top: 1rem;
   left: 6rem;
   right: 2rem;
   position: absolute;
@@ -69,7 +73,7 @@ body {
 }
 
 .search-text {
-  min-width: 20rem;
+  min-width: 30rem;
 }
 
 .search-button {
@@ -119,8 +123,7 @@ body {
 
 
 
-
-/* Popup */
+/* Popup____________________________________________________________  */
 .popup {
   gap: 1rem;
 }
@@ -139,4 +142,91 @@ body {
   cursor: pointer;
   border-radius: 0.5rem;
   font-weight: 700;
+}
+
+
+
+/* Drawer____________________________________________________________ */
+.drawer-container {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(255, 255, 255);
+  padding: 1.5rem;
+  margin: 0;
+  border-radius: 1.5rem 1.5rem 0 0;
+  z-index: 100;
+  box-shadow: 0rem -0.8rem 0.3rem rgba(135, 135, 135, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.drawer-container h4 {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.drawer-container p {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.drawer-infos {
+  gap: 1rem;
+}
+
+.drawer-infos button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  padding: 1rem;
+  border: none;
+  background: #F0C900;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+
+
+
+/* ____________________________________________________________  */
+/* Page COMMAND */
+/* ____________________________________________________________  */
+
+.command{
+   position: relative;
+padding:1rem;
+  margin:1rem;
+
+}
+
+header{
+display: flex;
+flex-direction: row;
+align-items:center ;
+justify-content: space-between;
+}
+.map-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+  border: none;
+  background: #F0C900;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.map-icon{
+   display: block;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
 }
