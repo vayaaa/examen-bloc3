@@ -6,8 +6,7 @@ import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 
-
-//Marker de leaflet
+//Marker
 var marker = L.icon({
     iconUrl: markerIcon,
     iconRetinaUrl: markerIcon2x,
@@ -17,6 +16,7 @@ var marker = L.icon({
     shadowUrl: markerShadow,
     shadowSize: [41, 41]
 });
+
 
 
 //Déplacer la carte sur la ville selectionnée
