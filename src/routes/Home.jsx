@@ -7,9 +7,8 @@ import Drawer from "../components/Drawer";
 
 const Home = () => {
 
-  //state qui stock les villes
+  // state qui stock les villes
   const [cities, setCities] = useState([])
-
 
   //state qui stock la ville recherché/selectionné
   const [selectedCity, setSelectedCity] = useState(() => {
@@ -47,14 +46,14 @@ const Home = () => {
   useEffect(() => {
     if (selectedResto) {
       localStorage.setItem("selectedResto", JSON.stringify(selectedResto))
+    } else {
+      localStorage.removeItem("selectedResto")
     }
   }, [selectedResto]);
 
 
   //state qui stock les erreurs
   const [error, setError] = useState();
-
-
 
 
   //Gérer la recherche de ville
@@ -71,6 +70,8 @@ const Home = () => {
   const handleSelectCity = async (city) => {
     setSelectedCity(city);
     setRestaurants([]);
+    setSelectedResto(null);
+    localStorage.removeItem("selectedResto");
     setCities([]);
     setError("");
 

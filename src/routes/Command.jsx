@@ -1,30 +1,31 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import { useNavigate, Navigate } from "react-router-dom";
 
+//Lire le storage
+const readStorage = (key) => {
+    const saved = localStorage.getItem(key);
+
+    if (saved === null) {
+        return null;
+    }
+    try {
+        return JSON.parse(saved);
+    } catch (error) {
+        return null;
+    }
+}
 
 const Command = () => {
 
-    const [selectedResto, setSelectedResto] = useState(() => {
-        const savedSelectedResto = localStorage.getItem("selectedResto")
-
-        return savedSelectedResto ? JSON.parse(savedSelectedResto) : null
-    })
-
-
-    const [selectedCity, setSelectedCity] = useState(() => {
-        const savedSelectedCity = localStorage.getItem("selectedCity")
-
-        return savedSelectedCity ? JSON.parse(savedSelectedCity) : null
-    })
-
-
-     const [restaurants, setRestaurants] = useState(() => {
-        const savedRestaurants = localStorage.getItem("restaurants")
-
-        return savedRestaurants ? JSON.parse(savedRestaurants) : null
-    })
-
     const navigate = useNavigate();
+    //Lecture des infos dans le localStorage
+    const selectedCity = readStorage("selectedCity");
+    const selectedResto = readStorage("selectedResto");
+
+    if (!selectedCity || !selectedResto) {
+        return <Navigate to="/" replace />;
+    }
+
     const changePage = () => {
         localStorage.removeItem("selectedResto");
         navigate(`/`);

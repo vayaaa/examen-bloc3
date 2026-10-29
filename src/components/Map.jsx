@@ -17,8 +17,6 @@ var marker = L.icon({
     shadowSize: [41, 41]
 });
 
-
-
 //Déplacer la carte sur la ville selectionnée
 const ChangeMapCity = ({ selectedCity }) => {
     const map = useMap();
@@ -41,7 +39,6 @@ const ChangeMapCity = ({ selectedCity }) => {
 
     return null;
 }
-
 
 //Affiche la carte et les éléments d'infos 
 const Map = ({ selectedCity, restaurants = [], onSelectResto }) => {

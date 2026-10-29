@@ -13,7 +13,6 @@ if(navigation && navigation.type === "reload"){
   localStorage.removeItem("selectedCity");
   localStorage.removeItem("selectedResto");
   localStorage.removeItem("restaurants");
-
 }
 
 createRoot(document.getElementById('root')).render(
